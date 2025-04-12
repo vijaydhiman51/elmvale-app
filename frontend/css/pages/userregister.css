@@ -1,0 +1,10 @@
+.form-container {
+    max-width: 900px;
+    margin: 3rem auto;
+  }
+
+  .error {
+    color: red;
+    font-size: 0.85em;
+    display: none;
+  }

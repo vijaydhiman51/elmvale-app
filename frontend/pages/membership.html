@@ -1,0 +1,120 @@
+<div id="membership-page">
+    <!-- Membership Page Banner -->
+    <section class="position-relative overflow-hidden" style="max-height: 500px">
+        <img src="assets/images/Annual Meeting-Nov 2024-1.jpg" class="w-100" style="
+          object-fit: cover;
+          object-position: center;
+          height: 100%;
+          max-height: 500px;
+        " alt="Membership" />
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-white"
+            style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6)">
+            <h1 class="fw-bold" style="font-size: 2.8rem">Membership</h1>
+            <p class="lead" style="font-size: 1.1rem">
+                Join us and grow with our gardening community
+            </p>
+        </div>
+    </section>
+
+    <!-- Membership Form -->
+    <section class="py-5 container">
+        <h1>Membership Application Form</h1>
+
+        <div class="card p-4 shadow-sm bg-white">
+            <h3 class="mb-3">E.D.G.E. (Elmvale District Garden Enthusiasts)</h3>
+
+            <form id="membershipForm" novalidate onsubmit="window.onMembershipFormSubmit(event);">
+                <div class="mb-3">
+                    <label for="fullName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="fullName" name="fullName" />
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address" name="address" />
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="postalCode" class="form-label">Postal Code</label>
+                        <input type="text" class="form-control" id="postalCode" name="postalCode" />
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="phone" class="form-label">Phone #</label>
+                        <input type="text" class="form-control" id="phone" name="phone" />
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail Address</label>
+                    <input type="email" class="form-control" id="email" name="email" />
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label me-3" for="membershipType">Membership Type:</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="newMember" name="membershipType" value="New"
+                            checked="true" />
+                        <label class="form-check-label" for="newMember">New</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="renewingMember" name="membershipType"
+                            value="Renewing" />
+                        <label class="form-check-label" for="renewingMember">Renewing</label>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="membershipFee"><strong>Membership Fee:</strong> Single $15 per year</label>
+                    <input type="hidden" id="membershipFee" value="15" />
+                    <p>
+                        Cheques are made payable to:
+                        <strong>Elmvale and District Horticultural Society</strong>
+                    </p>
+                </div>
+
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="acceptConstitution" />
+                    <label class="form-check-label" for="acceptConstitution">I have read the Constitution and Code of
+                        Conduct</label>
+                    <div class="invalid-feedback d-block" id="constitutionError"></div>
+                </div>
+
+                <h5>Photo Release Permission and Photo Waiver</h5>
+                <p>
+                    Participants involved in any activities offered by E.D.G.E. may be
+                    photographed or videotaped during events. The undersigned consents
+                    to the use of these photos and/or videos without compensation on
+                    E.D.G.E.’s social media and promotional materials.
+                </p>
+
+                <div class="mb-3">
+                    <label for="signature" class="form-label">Signature</label>
+                    <input type="text" class="form-control" id="signature" name="signature" />
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="printedName" class="form-label">Name Printed Neatly</label>
+                    <input type="text" class="form-control" id="printedName" name="printedName" />
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="date" name="date" />
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <button type="submit" class="btn btn-success">Submit & Download PDF</button>
+                <small class="text-muted d-block mt-2">Please print this page and bring it to the meeting with the
+                    payment.</small>
+            </form>
+        </div>
+    </section>
+</div>

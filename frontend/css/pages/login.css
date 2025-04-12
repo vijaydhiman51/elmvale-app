@@ -1,0 +1,27 @@
+.form-container {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 5vh;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.token-display {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    word-break: break-word;
+    color: #155724;
+    background-color: #d4edda;
+    padding: 0.5rem;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+}
+
+.toggle-link {
+    cursor: pointer;
+    color: #198754;
+    text-decoration: underline;
+    margin-top: 1rem;
+}

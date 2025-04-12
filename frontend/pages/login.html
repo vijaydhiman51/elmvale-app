@@ -1,0 +1,59 @@
+<div id="login-page" class="form-container  mt-5 mb-5 p-4 shadow-sm bg-white rounded">
+    <h2 class="text-center text-success mb-4" id="form-title">User Login</h2>
+
+    <!-- Login Form -->
+    <form id="login-form" onsubmit="window.onLoginFormSubmit(event)">
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input id="username" type="text" class="form-control" placeholder="Enter your username" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input id="password" type="password" class="form-control" placeholder="Enter your password" required />
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">Login</button>
+        <div class="text-danger mt-2" id="messageLogin"></div>
+    </form>
+
+    <!-- Verify Form -->
+    <form id="verify-form" style="display: none;" onsubmit="window.onVerifyFormSubmit(event)">
+        <div class="mb-3">
+            <label for="verifyusername" class="form-label">Username</label>
+            <input id="verifyusername" type="text" class="form-control" placeholder="Enter your username"
+                required />
+        </div>
+
+        <div class="mb-3">
+            <label for="verifyemail" class="form-label">Email</label>
+            <input id="verifyemail" type="email" class="form-control" placeholder="Enter your email" required />
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">Verify Identity</button>
+        <div class="text-danger mt-2" id="messageVerify"></div>
+    </form>
+
+    <div id="tokenResult" class="token-display" style="display: none;"></div>
+
+    <!-- Change Password Form -->
+    <form id="change-password-form" style="display: none;" onsubmit="window.onResetPasswordFormSubmit(event)">
+        <div class="mb-3">
+            <label for="newpassword" class="form-label">New Password</label>
+            <input id="newpassword" type="password" class="form-control" placeholder="New password" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="verifypassword" class="form-label">Confirm Password</label>
+            <input id="verifypassword" type="password" class="form-control" placeholder="Confirm new password"
+                required />
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">Change Password</button>
+        <div class="text-danger mt-2" id="messageChangePassword"></div>
+    </form>
+
+    <div class="text-center">
+        <span class="toggle-link" onclick="window.toggleForms()">Forget Password?</span>
+    </div>
+</div>

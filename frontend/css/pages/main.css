@@ -1,0 +1,65 @@
+.banner {
+    background-color: #a9d18e;
+    padding: 80px 0;
+    color: white;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.banner {
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .banner {
+        height: 500px;
+    }
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.banner>div {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 2s ease forwards;
+}
+
+
+/* Smooth Fade Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

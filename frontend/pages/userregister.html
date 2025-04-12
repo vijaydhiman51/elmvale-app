@@ -1,0 +1,132 @@
+<div id="userregister">
+    <section class="py-5 container">
+        <div class="card p-4 shadow-sm bg-white">
+            <h2 class="text-center fw-bold mb-4">E.D.G.E User Registration</h2>
+
+            <form id="registrationForm" novalidate onsubmit="window.onUserRegisterFormSubmit(event);">
+                <!-- Login Credentials -->
+                <h5>Account Credentials</h5>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="username" class="form-label">Username <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="username" required />
+                        <div class="error" id="usernameError">Username is required.</div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="email" required />
+                        <div class="error" id="emailError">Valid email is required.</div>
+                    </div>
+                </div>
+
+                <!-- Personal Info -->
+                <h5 class="mt-4">Personal Information</h5>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="firstName" class="form-label">First Name <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="firstName" required />
+                        <div class="error" id="firstNameError">First name is required.</div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="middleName" class="form-label">Middle Name</label>
+                        <input type="text" class="form-control" id="middleName" />
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="lastName" class="form-label">Last Name <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="lastName" required />
+                        <div class="error" id="lastNameError">Last name is required.</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="dob" class="form-label">Date of Birth <span class="text-danger">*</span></label>
+                        <input type="date" class="form-control" id="dob" />
+                        <div class="error" id="dobError">Date of birth is required.</div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="gender" class="form-label">Gender <span class="text-danger">*</span></label>
+                        <select class="form-select" id="gender" required>
+                            <option value="">Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error" id="genderError">Please select a gender.</div>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <h5 class="mt-4">Address</h5>
+                <div class="mb-3">
+                    <label for="street" class="form-label">Street</label>
+                    <input type="text" class="form-control" id="street" />
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="city" class="form-label">City <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="city" required />
+                        <div class="error" id="cityError">City is required.</div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="state" class="form-label">State <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="state" required />
+                        <div class="error" id="stateError">State is required.</div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="zip" class="form-label">ZIP Code <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="zip" required />
+                        <div class="error" id="zipError">ZIP Code is required.</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="country" class="form-label">Country <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="country" required />
+                    <div class="error" id="countryError">Country is required.</div>
+                </div>
+
+                <!-- Contact -->
+                <div class="mb-3">
+                    <label for="phoneNumbers" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" id="phoneNumbers" required />
+                    <div class="error" id="phoneError">Phone number is required.</div>
+                </div>
+
+                <!-- Emergency -->
+                <h5 class="mt-4">Emergency Contact</h5>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="emergencyName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="emergencyName" />
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="relationship" class="form-label">Relationship</label>
+                        <input type="text" class="form-control" id="relationship" />
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="emergencyPhone" class="form-label">Phone</label>
+                        <input type="text" class="form-control" id="emergencyPhone" />
+                    </div>
+                </div>
+
+                <!-- Roles -->
+                <div class="mb-3">
+                    <label class="form-label" for="roleUser">Register as:</label><br />
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="roleUser" value="user" checked />
+                        <label class="form-check-label" for="roleUser">User</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="roleAdmin" value="admin" />
+                        <label class="form-check-label" for="roleAdmin">Admin</label>
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-success px-4">Register</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,36 @@
+<div id="newsadd-page">
+    <div class="container my-4">
+        <h4>Add News</h4>
+        <form id="newsForm" class="p-3 border rounded bg-light shadow-sm" onsubmit="window.OnAddNews(event)">
+            <div class="mb-3">
+                <label for="title" class="form-label">News Title</label>
+                <input type="text" class="form-control" id="title" name="title" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="content" class="form-label">Content</label>
+                <textarea class="form-control" id="content" name="content" rows="4" required></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" class="form-control" id="date" name="date" required />
+            </div>
+
+            <button type="submit" class="btn btn-success">Submit</button>
+
+            <!-- Success Message -->
+            <div id="newsMessageBox" style="display: none;margin-top: 15px;border-radius: 5px;" class="text-success"
+                role="alert">
+                News Added successfully!
+            </div>
+
+            <!-- Error Message -->
+            <div id="newsEerrorBox" style="display: none;margin-top: 15px;border-radius: 5px;" class="text-danger"
+                role="alert">
+                Upload failed. Please try again!
+            </div>
+        </form>
+    </div>
+
+</div>
