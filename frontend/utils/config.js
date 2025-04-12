@@ -1,4 +1,4 @@
-const BASE_URL = "https://sample-app-b4g5.onrender.com";
+const BASE_URL = "https://elmvale-app.onrender.com";
 const CONFIG = {
   BASE_URL,
   ENDPOINTS: {
